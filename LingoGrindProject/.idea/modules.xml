@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../LG/.idea/LG.iml" filepath="$PROJECT_DIR$/../../LG/.idea/LG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LingoGrindProject.iml" filepath="$PROJECT_DIR$/.idea/LingoGrindProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../jstest/.idea/jstest.iml" filepath="$PROJECT_DIR$/../../jstest/.idea/jstest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../lingogrind/.idea/lingogrind.iml" filepath="$PROJECT_DIR$/../lingogrind/.idea/lingogrind.iml" />
+    </modules>
+  </component>
+</project>

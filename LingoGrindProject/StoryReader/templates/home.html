@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+    {% load staticfiles %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+	<meta name="author" content="makara" />
+    <meta charset="UTF-8">
+	
+    <title>LingoGrind Landing</title>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_common.css' %}" />
+    <!--<script type="text/javascript" src="{% static 'js/headline_changer.js' %}"></script>-->
+    <script type="text/javascript" src="{% static 'js/modernizr.custom.69142.js' %}"></script>
+    <!--<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/languagechanger.js' %} "></script>
+    <script type="text/javascript" src="{% static 'js/pickstory.js' %} "></script>
+    <script type="text/javascript" src="{% static 'js/translatestory.js' %} "></script>
+    <script type="text/javascript">
+
+
+    		Modernizr.load({
+    			test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+    			yep : ['http://blog.makaradewangga.com/media/js/jquery.js','static/js/jquery.hoverfold.js'],
+    			nope: 'fallback.css',
+    			callback : function( url, result, key ) {
+
+    				if( url === 'static/js/jquery.hoverfold.js' ) {
+    			$( '#grid' ).hoverfold();
+    				}
+
+    			}
+    		});
+
+    		var main = function () {
+
+
+            $(".hidedivs").hide();
+
+            $(".toggler").click(function ()
+            {
+                $("#" + $(this).attr("id") + "-info").show().siblings('div').hide();
+            });
+
+
+}
+$(document).ready(main);
+
+
+
+
+  </script>
+
+
+</script>
+   
+</head>
+
+<body>
+<div id="header">
+    <div class="titleBox">
+        <h1 style="margin: 0;">
+           LingoGrind
+
+        </h1>
+    </div>
+    <div class="titleBox" align="right">
+        2015 &copy lingogrind.com
+    </div>
+    <div class="clear">
+
+    </div>
+</div>
+
+<div align="center">
+    <div id="links" style="margin: 10px;">
+        <a class="header-button" id="about">About</a>
+        <a class="header-button" id="contact"> Contact Us</a>
+    </div>
+    <div>
+        <div class="header-divs" id="about-info">
+        <div class="backbutton"></div>
+        About
+        </div>
+        <div class="header-divs" id="contact-info">
+        <div class="backbutton"></div>
+        Contact
+        </div>
+    </div>
+    <div align="center" >
+        <p class="tagline">What is your native language?</p>
+        <p class="tagline">¿Qué es su idioma nativo?</p>
+        <p class="tagline">你的母语是什么？</p>
+    </div>
+    <div style="width: 1000px;" align="left">
+        <div id="grid" class="main">
+    		<div class="view" >
+    			<div class="view-back">
+    				 <ul>
+                        <li><a class="toggler" id="five" class="hideeverything1">学英文</a></li>
+                        <li><a class="toggler" id="six" class="hideeverything1">学西班牙文</a></li>
+                    </ul>
+    			</div>
+    			<img src="{% static 'img/chin_flag.png' %}" />
+    		</div>
+            <div class="view" style="margin-left: 5px;">
+    			<div class="view-back">
+    				 <ul>
+                        <li><a class="toggler" id="one" class="hideeverything1">Learn Spanish</a></li>
+                        <li><a class="toggler" id="two" class="hideeverything1">Learn Chinese</a></li>
+                    </ul>
+    			</div>
+    			<img src="{% static 'img/english_flag.png' %}"  />
+    		</div>
+            <div class="view" >
+    			<div class="view-back">
+                    <ul>
+                        <li><a class="toggler" id="three" class="hideeverything1">Aprender ingles</a></li>
+                        <li><a class="toggler" id="four" class="hideeverything1">Aprender chino</a></li>
+                    </ul>
+    			</div>
+    			<img src="{% static 'img/spanish_flag.png' %}"  />
+    		</div>
+
+        <div class="storyreader">
+            <div id = "choosestory">
+                    <div class="hidedivs" id="one-info">
+                        <ul>
+                            <li><a id="toenglish-conejofumaba" class="togglestory">El Conejo que Fumaba</a></li>
+                            <li><a id="toenglish-ranapato" class="togglestory">Señor Rana y Señor Pato</a></li>
+                            <li><a id="toenglish-pajaroocupado" class="togglestory">La Pequeña Ave Ocupada</a></li>
+                            <li><a id="toenglish-insectoiphone" class="togglestory">Los Insectos con iPhones</a></li>
+                            <li><a id="toenglish-ardillapolitical" class="togglestory">La Ardilla Política y La Ardilla Trabajadora</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hidedivs" id="two-info">
+                        <ul>
+                            <li><a id="toenglish-chouyandetuzi" class="togglestory">抽烟的兔子</a></li>
+                            <li><a id="toenglish-qingwayazi" class="togglestory">青蛙先生与鸭子先生</a></li>
+                            <li><a id="toenglish-mangdeniaozi" class="togglestory">忙碌的小鸟</a></li>
+                            <li><a id="toenglish-iphonekunchong" class="togglestory">iPhone的昆虫</a></li>
+                            <li><a id="toenglish-songshu" class="togglestory">政治性的松鼠和勤劳的松鼠</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hidedivs" id="three-info">
+                        <ul>
+                            <li><a id="tospanish-bunnywhosmoked" class="togglestory">The Bunny that Smoked</a></li>
+                            <li><a id="tospanish-mrfrogmrduck" class="togglestory">Mr.Frog and Mr.Duck</a></li>
+                            <li><a id="tospanish-busybird" class="togglestory">The Busy Little Bird</a></li>
+                            <li><a id="tospanish-iphoneinsect" class="togglestory">The iPhone Insects</a></li>
+                            <li><a id="tospanish-politicalindustrious" class="togglestory">The Political Squirrel and the Industrious Squirrel</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hidedivs" id="four-info">
+                        <ul>
+
+                            <li><a id="tospanish-chouyandetuzi" class="togglestory">抽烟的兔子</a></li>
+                            <li><a id="tospanish-qingwayazi" class="togglestory">青蛙先生与鸭子先生</a></li>
+                            <li><a id="tospanish-mangdeniaozi" class="togglestory">忙碌的小鸟</a></li>
+                            <li><a id="tospanish-iphonekunchong" class="togglestory">iPhone的昆虫</a></li>
+                            <li><a id="tospanish-songshu" class="togglestory">政治性的松鼠和勤劳的松鼠</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hidedivs" id="five-info">
+                        <ul>
+                            <li><a id="tochinese-bunnywhosmoked" class="togglestory">The Bunny that Smoked</a></li>
+                            <li><a id="tochinese-mrfrogmrduck" class="togglestory">Mr.Frog and Mr.Duck</a></li>
+                            <li><a id="tochinese-busybird" class="togglestory">The Busy Little Bird</a></li>
+                            <li><a id="tochinese-iphoneinsect" class="togglestory">The iPhone Insects</a></li>
+                            <li><a id="tochinese-politicalindustrious" class="togglestory">The Political Squirrel and the Industrious Squirrel</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hidedivs" id="six-info">
+                        <ul>
+                            <li><a id="tochinese-conejofumaba" class="togglestory">El Conejo que Fumaba</a></li>
+                            <li><a id="tochinese-ranapato" class="togglestory">Sr. Rana y Sr. Pato</a></li>
+                            <li><a id="tochinese-pajaroocupado" class="togglestory">La Pequeña Ave Ocupada</a></li>
+                            <li><a id="tochinese-insectoiphone" class="togglestory">Los Insectos con iPhones</a></li>
+                            <li><a id="tochinese-ardillapolitical" class="togglestory">La Ardilla Política y La Ardilla Trabajadora</a></li>
+
+                        </ul>
+                    </div>
+
+           </div>
+           <div class="storyblock">
+              <div id="mainstory">
+                  <!--THE BELOW STORIES ARE ENGLISH TO CHINESE-->
+
+                    <div id= "tochinese-bunnywhosmoked-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-chouyandetuzi" class="toggletrans">Translate</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tochinese-mrfrogmrduck-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-qingwayazi" class="toggletrans">Translate</a>
+                    <br>
+                    <br>
+                     {% for mrfrogduck in mrfrogducks %}
+
+                     {{mrfrogduck.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tochinese-busybird-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-mangdeniaozi" class="toggletrans">Translate</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "tochinese-iphoneinsect-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-iphonekunchong" class="toggletrans">Translate</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.englishStory|safe}}
+
+                    {% endfor %}
+                    </div>
+                    <div id= "tochinese-politicalindustrious-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-songshu" class="toggletrans">Translate</a>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                  <!--THE BELOW STORIES ARE SPANISH TO CHINESE-->
+
+
+                  <div id= "tochinese-conejofumaba-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-chouyandetuzi" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tochinese-ranapato-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-qingwayazi" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for mrfrogduck in mrfrogducks %}
+
+                     {{mrfrogduck.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tochinese-pajaroocupado-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-mangdeniaozi" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "tochinese-insectoiphone-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-iphonekunchong" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.spanishStory|safe}}
+
+                    {% endfor %}
+                    </div>
+                    <div id= "tochinese-ardillapolitical-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-songshu" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <!--THE BELOW STORIES ARE SPANISH TO ENGLISH-->
+
+
+                  <div id= "toenglish-conejofumaba-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-bunnywhosmoked" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "toenglish-ranapato-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-frogduck" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for mrfrogduck in mrfrogducks %}
+
+                     {{mrfrogduck.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "toenglish-pajaroocupado-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-busybird" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "toenglish-insectoiphone-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-iphoneinsect" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.spanishStory|safe}}
+
+                    {% endfor %}
+                    </div>
+                    <div id= "toenglish-ardillapolitical-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-squirrel" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <!--THE BELOW STORIES ARE CHINESE TO ENGLISH-->
+
+                    <div id= "toenglish-chouyandetuzi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-bunnywhosmoked" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "toenglish-qingwayazi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-frogduck" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "toenglish-mangdeniaozi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-busybird" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "toenglish-iphonekunchong-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-iphoneinsect" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "toenglish-songshu-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-squirrel" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <!--THE BELOW STORIES ARE CHINESE TO SPANISH-->
+
+                    <div id= "tospanish-chouyandetuzi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-conejoquefumaba" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-qingwayazi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-ranapato" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-mangdeniaozi-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-pajaroocupado" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "tospanish-iphonekunchong-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-insectoiphone" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-songshu-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-ardillapolitical" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <!--THE BELOW STORIES ARE ENGLSIH TO SPANISH-->
+
+                    <div id= "tospanish-bunnywhosmoked-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-conejoquefumaba" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for bunnysmoke in bunnysmokes %}
+
+                     {{bunnysmoke.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-mrfrogmrduck-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-ranapato" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-busybird-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-pajaroocupado" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+                     {% for busybird in busybirds %}
+
+                     {{busybird.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div id= "tospanish-iphoneinsect-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-insectoiphone" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id= "tospanish-politicalindustrious-info" class="hidestorydivs" class="hideit">
+                    <a id = "trans-ardillapolitical" class="toggletrans">Traducir</a>
+                    <br>
+                    <br>
+
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+
+              </div>
+
+              <div id="transstory">
+
+                <!--THE FOLLOWING ARE CHINESE TRANSLATIONS-->
+
+                    <div id="trans-chouyandetuzi-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for bunnysmoke in bunnysmokes %}
+
+                    {{bunnysmoke.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-qingwayazi-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-mangdeniaozi-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for busybird in busybirds %}
+
+                    {{busybird.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-songshu-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-iphonekunchong-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.chineseStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                <!--THE FOLLOWING ARE ENGLISH TRANSLATIONS-->
+
+                    <div id="trans-bunnywhosmoked-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for bunnysmoke in bunnysmokes %}
+
+                    {{bunnysmoke.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-frogduck-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-busybird-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for busybird in busybirds %}
+
+                    {{busybird.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-squirrel-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-iphoneinsect-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.englishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+                    <!--THE FOLLOWING ARE ENGLISH TRANSLATIONS-->
+
+                    <div id="trans-conejoquefumaba-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for bunnysmoke in bunnysmokes %}
+
+                    {{bunnysmoke.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-ranapato-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for mrfrogduck in mrfrogducks %}
+
+                    {{mrfrogduck.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-pajaroocupado-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for busybird in busybirds %}
+
+                    {{busybird.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-ardillapolitical-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for squirrel in squirrels %}
+
+                    {{squirrel.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+                    <div id="trans-insectoiphone-info" class="hidetransdivs" >
+                    <br>
+                    <br>
+                    <br>
+                    {% for iphoneinsect in iphoneinsects %}
+
+                    {{iphoneinsect.spanishStory|safe}}
+
+                    {% endfor %}
+
+                    </div>
+
+
+
+              </div>
+
+            </div>
+        </div>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
